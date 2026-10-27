@@ -56,10 +56,6 @@
   padding-bottom: 14px;
 }
 
-.hero__pill {
-  display: none;
-}
-
 .hero__stage {
   position: relative;
   aspect-ratio: 1360 / 670;
@@ -234,11 +230,6 @@
 @media (max-width: 899px) {
   .hero {
     padding: 24px 0 0;
-  }
-
-  .hero__pill {
-    display: inline-flex;
-    margin-bottom: 20px;
   }
 
   .hero__stage {
