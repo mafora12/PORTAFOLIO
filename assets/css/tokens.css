@@ -1,0 +1,40 @@
+/* Design tokens — portafolio · final (Figma pHOkNKwPlH8yyZbFIRrZVk) */
+:root {
+  /* Color */
+  --c-bg: #fbf7f4;
+  --c-ink: #141213;
+  --c-muted: #6e6567;
+  --c-rose: #c93a6b;
+  --c-rose-light: #f4dce2;
+  --c-surface: #f1eae6;
+  --c-white: #ffffff;
+  --c-line: rgba(20, 18, 19, 0.25);
+  --c-placeholder: #d9d9d9;
+
+  /* Bloques oscuros (Lab, menú mobile) */
+  --c-dark-accent: #f2a7be;
+  --c-dark-text: #b8aeb0;
+  --c-dark-faint: #9a9395;
+  --c-dark-line: rgba(255, 255, 255, 0.15);
+
+  /* Tipografía */
+  --f-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --gutter: 40px;
+  --max: 1360px;
+
+  /* Sombras */
+  --shadow-portrait: 0 24px 48px rgba(51, 26, 31, 0.16);
+  --shadow-thumb: 0 16px 32px rgba(51, 26, 31, 0.12);
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (max-width: 899px) {
+  :root {
+    --gutter: 16px;
+  }
+}

@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mariana Florez — Product designer</title>
+    <meta
+      name="description"
+      content="Designer from Medellín studying Graphic Design and Digital Entertainment Engineering at UPB. I design clear, carefully crafted digital products — with an editorial eye and a love for motion and interaction."
+    />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="./">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="work/">Work</a>
+        <a href="lab/">Lab</a>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="./">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="work/"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="lab/"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="about/"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="contact/"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- Hero — quién soy y qué hago -->
+      <section class="container hero" aria-label="Intro">
+        <p class="pill hero__pill" data-reveal>
+          <img src="assets/img/ui/dot.svg" width="8" height="8" alt="" />
+          Open to internships · Remote or abroad
+        </p>
+
+        <div class="hero__stage" data-parallax>
+          <h1 class="hero__name">
+            <span class="hero__first" data-reveal data-depth style="--depth: -6">Mariana</span>
+            <span class="hero__last" data-reveal data-depth style="--depth: -6; --i: 2">Florez</span>
+          </h1>
+          <p class="hero__role serif" data-reveal data-depth style="--depth: -4; --i: 1">product designer</p>
+
+          <!-- TODO: retrato de Mariana (pendiente) -->
+          <div class="hero__portrait ph" role="img" aria-label="Portrait of Mariana Florez" data-reveal data-depth style="--depth: 10; --i: 1"></div>
+
+          <div class="hero__thumb hero__thumb--ariel" aria-hidden="true" data-reveal data-depth style="--depth: 28; --i: 3">
+            <img src="assets/img/home/hero-thumb-ariel.webp" width="380" height="380" alt="" />
+          </div>
+          <div class="hero__thumb hero__thumb--abismal" aria-hidden="true" data-reveal data-depth style="--depth: 36; --i: 4">
+            <img src="assets/img/home/hero-thumb-abismal.webp" width="175" height="380" alt="" />
+          </div>
+          <div class="hero__thumb hero__thumb--singer" aria-hidden="true" data-reveal data-depth style="--depth: 22; --i: 5">
+            <img src="assets/img/home/hero-thumb-singer.webp" width="483" height="380" alt="" />
+          </div>
+
+          <p class="hero__hello" data-reveal data-depth style="--depth: 16; --i: 4">Hi! I’m Mariana</p>
+        </div>
+
+        <div class="hero__bottom">
+          <div class="hero__about" data-reveal style="--i: 2">
+            <p>
+              Designer from Medellín studying Graphic Design and Digital Entertainment Engineering at UPB. I design
+              clear, carefully crafted digital products — with an editorial eye and a love for motion and interaction.
+            </p>
+            <ul class="chips">
+              <li class="chip">UPB · 2 degrees</li>
+              <li class="chip">Albatross Travel IT Group</li>
+              <li class="chip">Semillero Roja</li>
+            </ul>
+          </div>
+
+          <div class="hero__cta" data-reveal style="--i: 3">
+            <a class="btn btn--dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--outline" href="assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          </div>
+
+          <div class="hero__services" data-reveal style="--i: 4">
+            <h2 class="hero__services-label">What I do</h2>
+            <ol>
+              <li>UX / UI design <span>01</span></li>
+              <li>Product design <span>02</span></li>
+              <li>Editorial &amp; visual <span>03</span></li>
+              <li>Interactive prototyping <span>04</span></li>
+              <li>Motion &amp; 3D <span>05</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Momento scroll: retrato → imagen completa -->
+      <section class="container momento" aria-label="Statement">
+        <div class="momento__stage" data-expand>
+          <!-- TODO: imagen completa del retrato (pendiente) -->
+          <div class="momento__frame ph"></div>
+          <p class="momento__text">
+            <span>Designing products that feel <br class="lg-only" /><span class="serif">clear and human</span>.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Selected work -->
+      <section class="container selected" id="work" aria-labelledby="selected-title">
+        <div class="sec-head">
+          <h2 class="title-xl" id="selected-title" data-reveal>Selected <br class="lg-only" />work.</h2>
+          <p class="sec-head__note" data-reveal style="--i: 1">( 04 case studies — 2024 to 2026 )</p>
+        </div>
+
+        <div class="selected__grid">
+          <a class="case-card" href="work/atig-finance/" data-reveal>
+            <div class="case-card__media">
+              <img src="assets/img/home/cover-atig-finance.webp" width="1700" height="950" alt="ATIG Finance mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="case-card__head">
+              <h3 class="case-card__title">ATIG Finance</h3>
+              <span class="case-card__year">_2024</span>
+            </div>
+            <p class="case-card__desc">Invoicing software for travel agencies — plus a new visual system for the company.</p>
+            <ul class="chips">
+              <li class="chip">Real client</li>
+              <li class="chip">UX/UI</li>
+              <li class="chip">Brand</li>
+            </ul>
+          </a>
+
+          <a class="case-card" href="work/singer-500a/" data-reveal style="--i: 1">
+            <div class="case-card__media">
+              <img src="assets/img/home/cover-singer-500a.webp" width="1700" height="950" alt="Singer 500A mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="case-card__head">
+              <h3 class="case-card__title">Singer 500A</h3>
+              <span class="case-card__year">_2026</span>
+            </div>
+            <p class="case-card__desc">Redesigning a 1961 sewing machine to speak the language of tasks, not settings.</p>
+            <ul class="chips">
+              <li class="chip">Interaction</li>
+              <li class="chip">UX research</li>
+              <li class="chip">Product</li>
+            </ul>
+          </a>
+
+          <a class="case-card" href="work/abismal/" data-reveal>
+            <div class="case-card__media">
+              <img src="assets/img/home/cover-abismal.webp" width="1700" height="950" alt="Abismal mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="case-card__head">
+              <h3 class="case-card__title">Abismal</h3>
+              <span class="case-card__year">_2024</span>
+            </div>
+            <p class="case-card__desc">A transmedia experience about the abyssal zone for Parque Explora: app, 3D and animation.</p>
+            <ul class="chips">
+              <li class="chip">App UI</li>
+              <li class="chip">3D</li>
+              <li class="chip">Team project</li>
+            </ul>
+          </a>
+
+          <a class="case-card" href="work/ariel/" data-reveal style="--i: 1">
+            <div class="case-card__media">
+              <img src="assets/img/home/cover-ariel.webp" width="1700" height="950" alt="Ariel in 10, 30 &amp; 50 years mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="case-card__head">
+              <h3 class="case-card__title">Ariel in 10, 30 &amp; 50 years</h3>
+              <span class="case-card__year">_2025</span>
+            </div>
+            <p class="case-card__desc">Imagining the future of a brand: mobile apps, a VR experience and a full-scale stand.</p>
+            <ul class="chips">
+              <li class="chip">VR</li>
+              <li class="chip">3D</li>
+              <li class="chip">Motion</li>
+            </ul>
+          </a>
+        </div>
+      </section>
+
+      <!-- More product work -->
+      <section class="container more" aria-labelledby="more-title">
+        <h2 class="more__title" id="more-title" data-reveal>More product work</h2>
+        <div class="more__grid">
+          <a class="mini-card" href="work/beans-brew/" data-reveal>
+            <div class="mini-card__media">
+              <img src="assets/img/home/cover-beans-brew.webp" width="1700" height="950" alt="Beans + Brew mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="mini-card__body">
+              <div class="mini-card__head">
+                <h3 class="mini-card__title">Beans + Brew</h3>
+                <span class="mini-card__year">_2026</span>
+              </div>
+              <p class="mini-card__desc">A café ordering app designed in one week: feature map, user flow and UI.</p>
+              <ul class="chips">
+                <li class="chip chip--white">UX/UI</li>
+                <li class="chip chip--white">Mobile</li>
+              </ul>
+            </div>
+          </a>
+
+          <a class="mini-card" href="work/app-portafolio/" data-reveal style="--i: 1">
+            <div class="mini-card__media">
+              <img src="assets/img/home/cover-app-portafolio.webp" width="1700" height="950" alt="App Portafolio mockup" loading="lazy" decoding="async" />
+            </div>
+            <div class="mini-card__body">
+              <div class="mini-card__head">
+                <h3 class="mini-card__title">App Portafolio</h3>
+                <span class="mini-card__year">_2025</span>
+              </div>
+              <p class="mini-card__desc">A portfolio app that helps companies find talent, fully prototyped in Figma.</p>
+              <ul class="chips">
+                <li class="chip chip--white">UI</li>
+                <li class="chip chip--white">Prototyping</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- How I work -->
+      <section class="container process" aria-labelledby="process-title">
+        <div class="sec-head">
+          <h2 class="title-lg" id="process-title" data-reveal>How I work</h2>
+          <p class="sec-head__note" data-reveal style="--i: 1">Every case study follows these steps</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <div class="step__body">
+              <h3 class="step__title">Discover</h3>
+              <p class="step__desc">Interviews, benchmarks and research to understand people and context.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 1">
+            <span class="step__num">02</span>
+            <div class="step__body">
+              <h3 class="step__title">Define</h3>
+              <p class="step__desc">Problems, priorities and the flows that really matter.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 2">
+            <span class="step__num">03</span>
+            <div class="step__body">
+              <h3 class="step__title">Design</h3>
+              <p class="step__desc">Wireframes to polished UI — with type and hierarchy that guide.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 3">
+            <span class="step__num">04</span>
+            <div class="step__body">
+              <h3 class="step__title">Test</h3>
+              <p class="step__desc">Prototypes in front of real users, then iterate.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Lab -->
+      <section class="container lab-section" aria-labelledby="lab-title">
+        <div class="lab" data-reveal>
+          <div class="lab__head">
+            <div>
+              <h2 class="lab__title" id="lab-title">Lab</h2>
+              <p class="lab__tags serif">editorial · packaging · motion · 3D · generative</p>
+            </div>
+            <p class="lab__intro">Smaller projects and class exercises <br class="lg-only" />where I explore other crafts.</p>
+          </div>
+
+          <div class="lab__grid">
+            <a class="lab-card" href="lab/mia-y-tuya/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-mia-y-tuya.webp" width="468" height="600" alt="Mía y tuya" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Mía y tuya</h3><span class="lab-card__year">2024</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Editorial · Grade project</p>
+              <p class="lab-card__meta lab-card__meta--short">Editorial</p>
+            </a>
+            <a class="lab-card" href="lab/eclipse-art/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-eclipse-art.webp" width="468" height="600" alt="Eclipse Art" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Eclipse Art</h3><span class="lab-card__year">2024</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Editorial design</p>
+              <p class="lab-card__meta lab-card__meta--short">Editorial</p>
+            </a>
+            <a class="lab-card" href="lab/quarzus/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-quarzus.webp" width="468" height="600" alt="Quarzus" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Quarzus</h3><span class="lab-card__year">2023</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Packaging · Typography</p>
+              <p class="lab-card__meta lab-card__meta--short">Packaging</p>
+            </a>
+            <a class="lab-card" href="lab/letti/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-letti.webp" width="468" height="600" alt="Letti" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Letti</h3><span class="lab-card__year">2023</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Packaging · Real client</p>
+              <p class="lab-card__meta lab-card__meta--short">Packaging</p>
+            </a>
+            <a class="lab-card" href="lab/ophelia/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-ophelia.webp" width="507" height="600" alt="OPHELIA" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">OPHELIA</h3><span class="lab-card__year">2026</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Interactive typography</p>
+              <p class="lab-card__meta lab-card__meta--short">Interactive</p>
+            </a>
+            <a class="lab-card" href="lab/corazon/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-corazon.webp" width="468" height="600" alt="Corazón" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Corazón</h3><span class="lab-card__year">2026</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Generative · Sound</p>
+              <p class="lab-card__meta lab-card__meta--short">Generative</p>
+            </a>
+            <a class="lab-card" href="lab/forces-instrument/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-forces-instrument.webp" width="1074" height="600" alt="Forces Instrument" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Forces Instrument</h3><span class="lab-card__year">2026</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Generative · Performance</p>
+              <p class="lab-card__meta lab-card__meta--short">Generative</p>
+            </a>
+            <a class="lab-card" href="lab/humanized-objects/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-humanized-objects.webp" width="468" height="600" alt="Humanized objects" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Humanized objects</h3><span class="lab-card__year">2025</span></div>
+              <p class="lab-card__meta lab-card__meta--full">3D scene</p>
+              <p class="lab-card__meta lab-card__meta--short">3D</p>
+            </a>
+            <a class="lab-card" href="lab/machine-rig/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-machine-rig.webp" width="469" height="600" alt="Machine rig" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Machine rig</h3><span class="lab-card__year">2025</span></div>
+              <p class="lab-card__meta lab-card__meta--full">Rigging</p>
+              <p class="lab-card__meta lab-card__meta--short">Rigging</p>
+            </a>
+            <a class="lab-card" href="lab/robot-rig/">
+              <div class="lab-card__media"><img src="assets/img/home/lab-robot-rig.webp" width="1074" height="600" alt="Robot rig" loading="lazy" decoding="async" /></div>
+              <div class="lab-card__head"><h3 class="lab-card__title">Robot rig</h3><span class="lab-card__year">2025</span></div>
+              <p class="lab-card__meta lab-card__meta--full">3D · Rigging</p>
+              <p class="lab-card__meta lab-card__meta--short">3D · Rigging</p>
+            </a>
+          </div>
+
+          <a class="lab__more" href="lab/">See all 10 projects <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <!-- About me -->
+      <section class="container about" aria-labelledby="about-title">
+        <div class="sec-head">
+          <h2 class="title-lg" id="about-title" data-reveal>About me</h2>
+          <p class="about__tagline serif" data-reveal style="--i: 1">Proactive · Smart · Passionate</p>
+        </div>
+        <dl class="facts">
+          <div class="fact" data-reveal>
+            <dt>Education</dt>
+            <dd>Graphic Design — UPB<br />Digital Entertainment Design Engineering — UPB</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 1">
+            <dt>Experience</dt>
+            <dd>Albatross Travel IT Group<br />UX/UI and visual design · 2024 – today</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 2">
+            <dt>Research</dt>
+            <dd>Semillero “Roja: la mancha que moviliza” — publication</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 3">
+            <dt>Tools</dt>
+            <dd>Figma · Illustrator · Photoshop · InDesign · After Effects · Premiere · Blender · Maya · Unity · p5.js</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 4">
+            <dt>Languages</dt>
+            <dd>Spanish (native) · English (B2)</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- When I'm not designing… -->
+      <section class="container beyond" aria-labelledby="beyond-title">
+        <div class="sec-head">
+          <h2 class="beyond__title" id="beyond-title" data-reveal>
+            When I’m not <br class="lg-only" /><span class="serif">designing…</span>
+          </h2>
+          <p class="sec-head__note" data-reveal style="--i: 1">The things that shape how I see design</p>
+        </div>
+        <div class="passions">
+          <article class="passion" data-reveal>
+            <!-- TODO: foto de joyería (pendiente) -->
+            <div class="passion__media ph"></div>
+            <div class="passion__body">
+              <h3 class="passion__title">Jewelry</h3>
+              <p class="passion__desc">Orchid-inspired pieces — form, detail and material.</p>
+            </div>
+          </article>
+          <article class="passion" data-reveal style="--i: 1">
+            <!-- TODO: foto de ballet (pendiente) -->
+            <div class="passion__media ph"></div>
+            <div class="passion__body">
+              <h3 class="passion__title">Ballet</h3>
+              <p class="passion__desc">Discipline, rhythm and the beauty of precise movement.</p>
+            </div>
+          </article>
+          <article class="passion" data-reveal style="--i: 2">
+            <div class="passion__media">
+              <img src="assets/img/home/passion-ai.webp" width="810" height="600" alt="Generative particle piece" loading="lazy" decoding="async" />
+            </div>
+            <div class="passion__body">
+              <h3 class="passion__title">AI &amp; generative systems</h3>
+              <p class="passion__desc">Rules that create images — and tools that change how we design.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="container contact" aria-labelledby="contact-title">
+        <div class="contact__card" data-reveal>
+          <h2 class="contact__title" id="contact-title">
+            Let’s build something <br class="lg-only" /><span class="serif">together.</span>
+          </h2>
+          <p class="contact__lead">Looking for an internship in UX/UI and product design — remote or abroad.</p>
+          <a class="contact__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+          <div class="contact__actions">
+            <a class="btn btn--dark" href="mailto:marianaflorez1224@gmail.com">Send an email <span aria-hidden="true">→</span></a>
+            <!-- TODO: URLs reales de LinkedIn y Behance -->
+            <a class="btn btn--outline" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn--outline" href="#" target="_blank" rel="noopener">Behance</a>
+            <a class="btn btn--outline" href="assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          </div>
+          <footer class="contact__foot">
+            <p>© 2026 Mariana Florez</p>
+            <p><span class="lg-only">Designed &amp; built in Medellín</span><span class="sm-only">Made in Medellín</span></p>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
