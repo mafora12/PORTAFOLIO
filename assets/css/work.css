@@ -1,0 +1,219 @@
+/* Work — frames 591:168 (desktop 1440) y 704:2639 (mobile 390) */
+
+/* ---------- Encabezado ---------- */
+.page-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 64px 56px;
+}
+
+.page-head__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.page-head__title {
+  font-size: min(200px, 13.889vw);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.page-head__note {
+  color: var(--c-muted);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.page-head__tags {
+  color: var(--c-rose);
+  font-size: min(48px, 3.333vw);
+  line-height: 1.3;
+}
+
+.page-head__lead {
+  max-width: 720px;
+  color: var(--c-muted);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.page-head .filters {
+  padding-top: 24px;
+}
+
+@media (max-width: 899px) {
+  .page-head {
+    gap: 14px;
+    padding-block: 32px 0;
+  }
+
+  .page-head__title {
+    font-size: min(104px, 26.667vw);
+    line-height: 0.9;
+  }
+
+  .page-head__note {
+    display: none;
+  }
+
+  .page-head__tags {
+    font-size: 30px;
+  }
+
+  .page-head__lead {
+    font-size: 16px;
+  }
+
+  .page-head .filters {
+    padding-top: 8px;
+  }
+}
+
+/* ---------- Grilla de casos ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px 24px;
+}
+
+@media (max-width: 899px) {
+  .work-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    padding-top: 40px;
+  }
+}
+
+/* ---------- Banner del Lab ---------- */
+.lab-banner-wrap {
+  padding-block: 120px;
+}
+
+.lab-banner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 64px;
+  border-radius: 32px;
+  background: var(--c-ink);
+  color: var(--c-white);
+}
+
+.lab-banner__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+}
+
+.lab-banner__kicker {
+  color: var(--c-dark-accent);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.lab-banner__title {
+  font-size: min(64px, 4.444vw);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.lab-banner__tags {
+  color: var(--c-dark-accent);
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.lab-banner .btn {
+  margin-top: 16px;
+  padding: 14px 24px;
+}
+
+.lab-banner .btn:hover {
+  background: var(--c-dark-accent);
+}
+
+.lab-banner__thumbs {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.lab-banner__thumbs img {
+  width: 130px;
+  height: 170px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@media (max-width: 1199px) {
+  .lab-banner__thumbs img:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .lab-banner-wrap {
+    padding-block: 72px 0;
+  }
+
+  .lab-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  .lab-banner__text {
+    display: contents;
+  }
+
+  .lab-banner__kicker {
+    font-size: 13px;
+  }
+
+  .lab-banner__title {
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .lab-banner__tags {
+    font-size: 20px;
+  }
+
+  .lab-banner .btn {
+    order: 1;
+    margin-top: 0;
+    padding: 13px 20px;
+  }
+
+  .lab-banner__thumbs {
+    gap: 8px;
+    padding-block: 8px;
+  }
+
+  .lab-banner__thumbs {
+    width: 100%;
+  }
+
+  .lab-banner__thumbs img,
+  .lab-banner__thumbs img:nth-child(n + 3) {
+    display: block;
+    flex: 0 1 70px;
+    min-width: 0;
+    width: 70px;
+    height: auto;
+    aspect-ratio: 70 / 92;
+    border-radius: 10px;
+  }
+}

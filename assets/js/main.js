@@ -1,5 +1,5 @@
 // Interacciones del sitio: menú mobile, aparición al hacer scroll,
-// parallax del hero y apertura del "momento scroll".
+// parallax del hero, apertura del "momento scroll" y filtros de Work/Lab.
 (() => {
   const root = document.documentElement;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -8,6 +8,7 @@
   initReveal();
   initHeroParallax();
   initExpand();
+  initFilters();
 
   function initMenu() {
     const menu = document.getElementById("menu");
@@ -118,5 +119,33 @@
     window.addEventListener("scroll", queue, { passive: true });
     window.addEventListener("resize", queue);
     update();
+  }
+
+  // Botones [data-filter] dentro de [data-filters="id"] filtran los [data-tags] de #id
+  function initFilters() {
+    document.querySelectorAll("[data-filters]").forEach((group) => {
+      const list = document.getElementById(group.dataset.filters);
+      if (!list) return;
+      const buttons = group.querySelectorAll("[data-filter]");
+      const items = list.querySelectorAll("[data-tags]");
+
+      group.addEventListener("click", (e) => {
+        const button = e.target.closest("[data-filter]");
+        if (!button) return;
+        const filter = button.dataset.filter;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+        items.forEach((item) => {
+          const match = filter === "all" || item.dataset.tags.split(" ").includes(filter);
+          const wasHidden = item.classList.contains("is-filtered-out");
+          item.classList.toggle("is-filtered-out", !match);
+          item.classList.remove("is-filtering-in");
+          if (match && wasHidden) {
+            item.classList.add("is-visible");
+            void item.offsetWidth; // reinicia la animación
+            item.classList.add("is-filtering-in");
+          }
+        });
+      });
+    });
   }
 })();
