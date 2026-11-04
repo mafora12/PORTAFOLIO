@@ -9,6 +9,7 @@
   initHeroParallax();
   initExpand();
   initFilters();
+  initMailtoForm();
 
   function initMenu() {
     const menu = document.getElementById("menu");
@@ -146,6 +147,22 @@
           }
         });
       });
+    });
+  }
+
+  // GitHub Pages no tiene backend: el formulario arma el correo y abre el cliente de correo
+  function initMailtoForm() {
+    const form = document.querySelector("form[data-mailto]");
+    if (!form) return;
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const company = data.get("company");
+      const subject = `${data.get("topic")} — ${data.get("name")}${company ? ` (${company})` : ""}`;
+      const body = `${data.get("message")}\n\n${data.get("name")}\n${data.get("email")}${company ? `\n${company}` : ""}`;
+      window.location.href =
+        `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 })();

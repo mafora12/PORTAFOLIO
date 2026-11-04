@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Mariana Florez</title>
+    <meta name="description" content="Tell me about your team, your product or your idea — or just say hi." />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/work.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="../">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="../work/">Work</a>
+        <a href="../lab/">Lab</a>
+        <a href="../about/">About</a>
+        <a href="../contact/" aria-current="page">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="../">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="../work/"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="../lab/"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="../about/"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="../contact/" aria-current="page"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="container contact-hero" aria-labelledby="page-title">
+        <div class="contact-hero__text">
+          <h1 class="contact-hero__title" id="page-title" data-reveal>Let’s talk.</h1>
+          <p class="contact-hero__tags serif" data-reveal style="--i: 1">internships · projects · ideas</p>
+          <p class="contact-hero__lead" data-reveal style="--i: 2">Tell me about your team, your product or your idea — or just say hi.</p>
+          <ul class="contact-list" data-reveal style="--i: 3">
+            <li><a href="mailto:marianaflorez1224@gmail.com"><span class="contact-list__label">Email</span><span class="contact-list__value">marianaflorez1224@gmail.com</span><span class="contact-list__arrow" aria-hidden="true">↗</span></a></li>
+            <li><!-- TODO: URL real de LinkedIn --><a href="#" target="_blank" rel="noopener"><span class="contact-list__label">LinkedIn</span><span class="contact-list__value">linkedin.com/in/[tu-usuario]</span><span class="contact-list__arrow" aria-hidden="true">↗</span></a></li>
+            <li><!-- TODO: URL real de Behance --><a href="#" target="_blank" rel="noopener"><span class="contact-list__label">Behance</span><span class="contact-list__value">behance.net/[tu-usuario]</span><span class="contact-list__arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/mafora12" target="_blank" rel="noopener"><span class="contact-list__label">GitHub</span><span class="contact-list__value">github.com/mafora12</span><span class="contact-list__arrow" aria-hidden="true">↗</span></a></li>
+            <li><span class="contact-list__label">Based in</span><span class="contact-list__value">Medellín, Colombia · GMT-5 — open to remote or relocating</span></li>
+            <li><span class="contact-list__label">Languages</span><span class="contact-list__value">Spanish (native) · English (B2)</span></li>
+          </ul>
+        </div>
+
+        <!-- Sin backend: el formulario arma un correo con los datos y abre el cliente de correo -->
+        <form class="form-card" data-mailto="marianaflorez1224@gmail.com" data-reveal style="--i: 2">
+          <h2 class="form-card__title">Send a message</h2>
+          <label class="field">
+            <span class="field__label">Name</span>
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Company or team</span>
+            <input type="text" name="company" placeholder="Where you work" autocomplete="organization" />
+          </label>
+          <fieldset class="field">
+            <legend class="field__label">What’s it about?</legend>
+            <div class="topic-options">
+              <label><input type="radio" name="topic" value="Internship" checked /><span>Internship</span></label>
+              <label><input type="radio" name="topic" value="Project" /><span>Project</span></label>
+              <label><input type="radio" name="topic" value="Just saying hi" /><span>Just saying hi</span></label>
+            </div>
+          </fieldset>
+          <label class="field">
+            <span class="field__label">Message</span>
+            <textarea name="message" placeholder="Tell me a bit about it…" required></textarea>
+          </label>
+          <button class="btn btn--dark" type="submit">Send message <span aria-hidden="true">→</span></button>
+          <p class="form-card__note">Or write directly to <a href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a></p>
+        </form>
+      </section>
+
+      <section class="container cv-wrap" aria-labelledby="cv-title">
+        <div class="cv-band" data-reveal>
+          <div>
+            <h2 class="cv-band__title" id="cv-title">Prefer the short version?</h2>
+            <p class="cv-band__text">My CV in one page — education, experience and tools.</p>
+          </div>
+          <a class="btn btn--dark" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV (PDF)</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <a class="site-footer__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+      <p class="site-footer__legal">© 2026 Mariana Florez<span class="sm-only"> · Made in Medellín</span></p>
+    </footer>
+  </body>
+</html>

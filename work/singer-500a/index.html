@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Singer 500A — Mariana Florez</title>
+    <meta name="description" content="From machine language to task language: rethinking a 1961 sewing machine for people who repair clothes instead of making them." />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap" />
+    <link rel="stylesheet" href="../../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <link rel="stylesheet" href="../../assets/css/case.css" />
+    <script src="../../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="../../">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="../../work/" aria-current="page">Work</a>
+        <a href="../../lab/">Lab</a>
+        <a href="../../about/">About</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="../../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="../../">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="../../work/" aria-current="page"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="../../lab/"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="../../about/"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="../../contact/"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="../../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <header class="container case-head">
+        <a class="case-head__back" href="../../work/" data-reveal><span aria-hidden="true">←</span>&nbsp; All work</a>
+        <ul class="chips" data-reveal>
+          <li class="chip">Interaction</li>
+          <li class="chip">UX research</li>
+          <li class="chip">Product</li>
+        </ul>
+        <h1 class="case-head__title" data-reveal style="--i: 1">Singer 500A</h1>
+        <p class="case-head__lead" data-reveal style="--i: 2">From machine language to task language: rethinking a 1961 sewing machine for people who repair clothes instead of making them.</p>
+        <dl class="case-facts" data-reveal style="--i: 3">
+          <div>
+            <dt>Role</dt>
+            <dd>UX/UI and interaction design</dd>
+          </div>
+          <div>
+            <dt>Context</dt>
+            <dd>UI/UX class · Challenge 4: adapt an object from the 1960s</dd>
+          </div>
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>Figma</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="container">
+        <figure class="case-cover" data-reveal>
+          <img src="../../assets/img/home/cover-singer-500a.webp" width="1700" height="950" alt="Singer 500A — cover" decoding="async" />
+        </figure>
+      </div>
+
+      <section class="container case-section" aria-labelledby="s0">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s0">The challenge</h2>
+          <div class="case-section__body">
+            <p>The Singer 500A “Rocketeer” (1961) still sews perfectly — the problem isn’t mechanical. It still speaks the language it was taught: tension, stitch length, presser foot.</p>
+            <p>Today almost nobody makes clothes from scratch; people repair, adjust and transform what they already own. New users give up before their first straight seam.</p>
+          </div>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s1">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s1">Research</h2>
+          <div class="case-section__body">
+            <p>I compared 1961 with 2026: where the machine lives, how people learn, what they sew, which fabrics and how much time they have.</p>
+            <p>I built a persona — Sara, 26, with her grandmother’s machine in the closet — and a scenario: hemming a pair of jeans on a Sunday, twenty minutes before going out.</p>
+          </div>
+        </div>
+        <div class="case-row" data-reveal>
+          <figure class="case-img" style="--w: 668; --h: 300">
+            <img src="../../assets/img/cases/singer-500a/1961-vs-2026.webp" alt="Singer 500A — 1961 compared with 2026" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="case-img" style="--w: 668; --h: 300">
+            <img src="../../assets/img/cases/singer-500a/persona.webp" alt="Singer 500A — Persona and scenario" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s2">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s2">Key decisions</h2>
+          <div class="case-section__body">
+
+            <ul class="case-points">
+              <li>The metal dial stays, but it changes language: its positions are no longer stitches, they are tasks — hem, patch, zipper, darning.</li>
+              <li>The interface is the fabric: the machine projects the seam guide onto the material, where the hands are, instead of on a screen.</li>
+              <li>Errors that explain: when the seam drifts, the machine slows down, marks where it went off and offers to undo only that stretch.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-row case-row--odd" data-reveal>
+          <figure class="case-img" style="--w: 437; --h: 320">
+            <img src="../../assets/img/cases/singer-500a/dial.webp" alt="Singer 500A — Task dial" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="case-img" style="--w: 437; --h: 320">
+            <img src="../../assets/img/cases/singer-500a/guide.webp" alt="Singer 500A — Projected guide" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="case-img" style="--w: 437; --h: 320">
+            <img src="../../assets/img/cases/singer-500a/error.webp" alt="Singer 500A — Error and correction" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s3">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s3">Outcome</h2>
+          <div class="case-section__body">
+            <p>A user flow for hemming jeans from start to finish, the task dial, and the projected-guide and error screens, presented in a deck with prototyped interactions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container case-next-wrap" aria-label="Next case">
+        <a class="case-next" href="../../work/abismal/" data-reveal>
+          <div>
+            <p class="case-next__label">Next case</p>
+            <p class="case-next__title">Abismal</p>
+          </div>
+          <div class="case-next__img">
+            <img src="../../assets/img/home/cover-abismal.webp" width="1700" height="950" alt="" loading="lazy" decoding="async" />
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <a class="site-footer__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+      <p class="site-footer__legal">© 2026 Mariana Florez<span class="sm-only"> · Made in Medellín</span></p>
+    </footer>
+  </body>
+</html>

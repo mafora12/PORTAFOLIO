@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Flux — Mariana Florez</title>
+    <meta name="description" content="[One line about Flux — e.g. an app that simulates cardiovascular physiology so medical students can learn by doing.]" />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap" />
+    <link rel="stylesheet" href="../../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <link rel="stylesheet" href="../../assets/css/case.css" />
+    <script src="../../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="../../">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="../../work/" aria-current="page">Work</a>
+        <a href="../../lab/">Lab</a>
+        <a href="../../about/">About</a>
+        <a href="../../contact/">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="../../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="../../">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="../../work/" aria-current="page"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="../../lab/"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="../../about/"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="../../contact/"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="../../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <header class="container case-head">
+        <a class="case-head__back" href="../../work/" data-reveal><span aria-hidden="true">←</span>&nbsp; All work</a>
+        <ul class="chips" data-reveal>
+          <li class="chip">Creative direction</li>
+          <li class="chip">App</li>
+          <li class="chip">Team project</li>
+        </ul>
+        <h1 class="case-head__title" data-reveal style="--i: 1">Flux</h1>
+        <p class="case-head__lead" data-reveal style="--i: 2">[One line about Flux — e.g. an app that simulates cardiovascular physiology so medical students can learn by doing.]</p>
+        <dl class="case-facts" data-reveal style="--i: 3">
+          <div>
+            <dt>My role</dt>
+            <dd>Creative director — scripts and creative concept</dd>
+          </div>
+          <div>
+            <dt>Team</dt>
+            <dd>[Team names]</dd>
+          </div>
+          <div>
+            <dt>Timeline</dt>
+            <dd>[Duration] · 2026</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>[Tools]</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="container"><div class="case-cover ph" role="img" aria-label="Flux cover (pending)" data-reveal></div></div>
+
+      <section class="container case-section" aria-labelledby="s0">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s0">The challenge</h2>
+          <div class="case-section__body">
+            <p>[What problem Flux solves, who it is for — medical students at UPB — and what the team was asked to build.]</p>
+          </div>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s1">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s1">What I did</h2>
+          <div class="case-section__body">
+            <p>As creative director I led the creative concept and wrote the scripts. [Add what you designed, defined or directed.]</p>
+          </div>
+        </div>
+        <div class="case-row case-row--odd" data-reveal>
+          <div class="case-img ph" style="--w: 437; --h: 420" role="img" aria-label="Flux — Fluxy character (pending)"></div>
+          <div class="case-img ph" style="--w: 437; --h: 420" role="img" aria-label="Flux — Scripts and storyboard (pending)"></div>
+          <div class="case-img ph" style="--w: 437; --h: 420" role="img" aria-label="Flux — App screens (pending)"></div>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s2">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s2">Key decisions</h2>
+          <div class="case-section__body">
+            <p>[Two or three decisions you pushed for and why they mattered.]</p>
+          </div>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s3">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s3">Outcome</h2>
+          <div class="case-section__body">
+            <p>[What the team delivered, who tested it and what happened.]</p>
+          </div>
+        </div>
+        <div class="case-row" data-reveal>
+          <div class="case-img ph" style="--w: 1360; --h: 620" role="img" aria-label="Flux — Final experience (pending)"></div>
+        </div>
+        <div class="case-row" data-reveal>
+          <div class="case-img ph" style="--w: 668; --h: 420" role="img" aria-label="Flux — Testing with students (pending)"></div>
+          <div class="case-img ph" style="--w: 668; --h: 420" role="img" aria-label="Flux — Behind the scenes (pending)"></div>
+        </div>
+      </section>
+      <section class="container case-section" aria-labelledby="s4">
+        <div class="case-section__text" data-reveal>
+          <h2 class="case-section__title" id="s4">What I learned</h2>
+          <div class="case-section__body">
+            <p>[What you learned leading the creative side of a team project.]</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container case-next-wrap" aria-label="Next case">
+        <a class="case-next" href="../../work/atig-finance/" data-reveal>
+          <div>
+            <p class="case-next__label">Next case</p>
+            <p class="case-next__title">ATIG Finance</p>
+          </div>
+          <div class="case-next__img">
+            <img src="../../assets/img/home/cover-atig-finance.webp" width="1700" height="950" alt="" loading="lazy" decoding="async" />
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <a class="site-footer__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+      <p class="site-footer__legal">© 2026 Mariana Florez<span class="sm-only"> · Made in Medellín</span></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Mariana Florez</title>
+    <meta name="description" content="Designer from Medellín studying Graphic Design and Digital Entertainment Design Engineering at UPB." />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="about-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="../">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="../work/">Work</a>
+        <a href="../lab/">Lab</a>
+        <a href="../about/" aria-current="page">About</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="../">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="../work/"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="../lab/"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="../about/" aria-current="page"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="../contact/"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="container about-hero" aria-labelledby="page-title">
+        <div class="about-hero__text">
+          <h1 class="about-hero__title" id="page-title" data-reveal>Hi, I’m Mariana.</h1>
+          <p class="about-hero__tagline serif" data-reveal style="--i: 1">Proactive · Smart · Passionate</p>
+          <p class="about-hero__p" data-reveal style="--i: 2">Designer from Medellín studying Graphic Design and Digital Entertainment Design Engineering at UPB. I design clear, carefully crafted digital products — with an editorial eye and a love for motion and interaction.</p>
+          <p class="about-hero__p about-hero__p--muted" data-reveal style="--i: 3">Studying both degrees at once means my work moves between interface, brand, code and 3D. Right now I’m looking for a UX/UI or product design internship — remote or abroad.</p>
+          <div class="about-hero__actions" data-reveal style="--i: 4">
+            <a class="btn btn--dark" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+            <a class="btn btn--outline" href="../contact/">Let’s talk <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <!-- TODO: retrato de Mariana (pendiente) -->
+        <div class="about-hero__portrait ph" role="img" aria-label="Portrait of Mariana Florez" data-reveal style="--i: 1"></div>
+      </section>
+
+      <section class="container statement-wrap" aria-label="Statement">
+        <div class="statement" data-reveal>
+          <p>Designing products that feel <span class="serif">clear and human.</span></p>
+        </div>
+      </section>
+
+      <section class="container background" aria-labelledby="bg-title">
+        <h2 class="title-md" id="bg-title" data-reveal>Background</h2>
+        <dl class="facts">
+          <div class="fact" data-reveal>
+            <dt>Education</dt>
+            <dd>Graphic Design — UPB<br />Digital Entertainment Design Engineering — UPB</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 1">
+            <dt>Experience</dt>
+            <dd>Albatross Travel IT Group<br />UX/UI and visual design · 2024 – today</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 2">
+            <dt>Research</dt>
+            <dd>Semillero “Roja: la mancha que moviliza” — publication</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 3">
+            <dt>Tools</dt>
+            <dd>Figma · Illustrator · Photoshop · InDesign · After Effects · Premiere · Blender · Maya · Unity · p5.js</dd>
+          </div>
+          <div class="fact" data-reveal style="--i: 4">
+            <dt>Languages</dt>
+            <dd>Spanish (native) · English (B2)</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="container about-do" aria-labelledby="do-title">
+        <div class="about-do__text" data-reveal>
+          <h2 class="title-md" id="do-title">What I do</h2>
+          <p>Five things I bring to a team — from the first sketch to the last pixel.</p>
+        </div>
+        <ol class="about-do__list" data-reveal style="--i: 1">
+          <li>UX / UI design <span>01</span></li>
+          <li>Product design <span>02</span></li>
+          <li>Editorial &amp; visual <span>03</span></li>
+          <li>Interactive prototyping <span>04</span></li>
+          <li>Motion &amp; 3D <span>05</span></li>
+        </ol>
+      </section>
+
+      <section class="container process" aria-labelledby="process-title">
+        <div class="sec-head">
+          <h2 class="title-lg" id="process-title" data-reveal>How I work</h2>
+          <p class="sec-head__note" data-reveal style="--i: 1">Every case study follows these steps</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal style="--i: 0">
+            <span class="step__num">01</span>
+            <div class="step__body">
+              <h3 class="step__title">Discover</h3>
+              <p class="step__desc">Interviews, benchmarks and research to understand people and context.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 1">
+            <span class="step__num">02</span>
+            <div class="step__body">
+              <h3 class="step__title">Define</h3>
+              <p class="step__desc">Problems, priorities and the flows that really matter.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 2">
+            <span class="step__num">03</span>
+            <div class="step__body">
+              <h3 class="step__title">Design</h3>
+              <p class="step__desc">Wireframes to polished UI — with type and hierarchy that guide.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal style="--i: 3">
+            <span class="step__num">04</span>
+            <div class="step__body">
+              <h3 class="step__title">Test</h3>
+              <p class="step__desc">Prototypes in front of real users, then iterate.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="container beyond" aria-labelledby="beyond-title">
+        <div class="sec-head">
+          <h2 class="beyond__title" id="beyond-title" data-reveal>When I’m not <br class="lg-only" /><span class="serif">designing…</span></h2>
+        </div>
+        <div class="passions">
+          <article class="passion" data-reveal>
+            <!-- TODO: foto de joyería (pendiente) -->
+            <div class="passion__media ph"></div>
+            <div class="passion__body">
+              <h3 class="passion__title">Jewelry</h3>
+              <p class="passion__desc">Orchid-inspired pieces — form, detail and material.</p>
+            </div>
+          </article>
+          <article class="passion" data-reveal style="--i: 1">
+            <!-- TODO: foto de ballet (pendiente) -->
+            <div class="passion__media ph"></div>
+            <div class="passion__body">
+              <h3 class="passion__title">Ballet</h3>
+              <p class="passion__desc">Discipline, rhythm and the beauty of precise movement.</p>
+            </div>
+          </article>
+          <article class="passion" data-reveal style="--i: 2">
+            <div class="passion__media">
+              <img src="../assets/img/home/passion-ai.webp" width="810" height="600" alt="Generative particle piece" loading="lazy" decoding="async" />
+            </div>
+            <div class="passion__body">
+              <h3 class="passion__title">AI &amp; generative systems</h3>
+              <p class="passion__desc">Rules that create images — and tools that change how we design.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="container contact" aria-labelledby="contact-title">
+        <div class="contact__card" data-reveal>
+          <h2 class="contact__title" id="contact-title">
+            Let’s build something <br class="lg-only" /><span class="serif">together.</span>
+          </h2>
+          <p class="contact__lead">Looking for an internship in UX/UI and product design — remote or abroad.</p>
+          <a class="contact__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+          <div class="contact__actions">
+            <a class="btn btn--dark" href="mailto:marianaflorez1224@gmail.com">Send an email <span aria-hidden="true">→</span></a>
+            <!-- TODO: URLs reales de LinkedIn y Behance -->
+            <a class="btn btn--outline" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn--outline" href="#" target="_blank" rel="noopener">Behance</a>
+            <a class="btn btn--outline" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          </div>
+          <footer class="contact__foot">
+            <p>© 2026 Mariana Florez</p>
+            <p><span class="lg-only">Designed &amp; built in Medellín</span><span class="sm-only">Made in Medellín</span></p>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

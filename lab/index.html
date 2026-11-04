@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab — Mariana Florez</title>
+    <meta name="description" content="Smaller projects and class exercises where I explore other crafts — editorial, packaging, generative code and 3D." />
+    <meta name="theme-color" content="#fbf7f4" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@1&display=swap" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/work.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="is-dark">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="container nav">
+      <a class="nav__logo" href="../">mariana florez</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="../work/">Work</a>
+        <a href="../lab/" aria-current="page">Lab</a>
+        <a href="../about/">About</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <!-- EN / ES oculto hasta tener la versión en español -->
+        <a class="btn btn--dark" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+      </div>
+      <button
+        class="nav__menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        data-menu-open
+      >
+        <span class="nav__menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+      <div class="menu__top">
+        <a class="menu__logo" href="../">mariana florez</a>
+        <button class="menu__close" type="button" aria-label="Close menu" data-menu-close>✕</button>
+      </div>
+      <ol class="menu__links">
+        <li style="--i: 0">
+          <a href="../work/"><span class="menu__num">01</span><span class="menu__label">Work</span></a>
+        </li>
+        <li style="--i: 1">
+          <a href="../lab/" aria-current="page"><span class="menu__num">02</span><span class="menu__label">Lab</span></a>
+        </li>
+        <li style="--i: 2">
+          <a href="../about/"><span class="menu__num">03</span><span class="menu__label">About</span></a>
+        </li>
+        <li style="--i: 3">
+          <a href="../contact/"><span class="menu__num">04</span><span class="menu__label">Contact</span></a>
+        </li>
+      </ol>
+      <div class="menu__bottom">
+        <a class="menu__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+        <div class="menu__actions">
+          <a class="btn btn--light" href="../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
+          <!-- TODO: URL real de LinkedIn -->
+          <a class="btn btn--outline-light" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="container page-head" aria-labelledby="page-title">
+        <div class="page-head__row">
+          <h1 class="page-head__title" id="page-title" data-reveal>Lab.</h1>
+          <p class="page-head__note" data-reveal style="--i: 1">( 10 projects · 2023 — 2026 )</p>
+        </div>
+        <p class="page-head__tags serif" data-reveal style="--i: 1">editorial · packaging · motion · 3D · generative</p>
+        <p class="page-head__lead" data-reveal style="--i: 2">Smaller projects and class exercises where I explore other crafts — editorial, packaging, generative code and 3D. It’s where most of my ideas start.</p>
+        <div class="filters" role="group" aria-label="Filter projects" data-filters="lab-list" data-reveal style="--i: 3">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All · 10</button>
+          <button class="filter" type="button" data-filter="editorial" aria-pressed="false">Editorial</button>
+          <button class="filter" type="button" data-filter="packaging" aria-pressed="false">Packaging</button>
+          <button class="filter" type="button" data-filter="interactive" aria-pressed="false">Interactive &amp; generative</button>
+          <button class="filter" type="button" data-filter="3d" aria-pressed="false">3D</button>
+        </div>
+      </section>
+
+      <div class="container lab-groups" id="lab-list">
+      <section class="lab-group" data-tags="editorial" data-reveal aria-labelledby="g0">
+        <div class="lab-group__label">
+          <p class="lab-group__num">01</p>
+          <h2 class="lab-group__title" id="g0">Editorial</h2>
+          <p class="lab-group__count">2 projects</p>
+        </div>
+        <div class="lab-group__items">
+          <a class="lab-card" href="mia-y-tuya/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-mia-y-tuya.webp" width="468" height="600" alt="Mía y tuya" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Mía y tuya</h3><span class="lab-card__year">2024</span></div>
+            <p class="lab-card__meta">Editorial · Illustration · Research</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="eclipse-art/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-eclipse-art.webp" width="468" height="600" alt="Eclipse Art" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Eclipse Art</h3><span class="lab-card__year">2024</span></div>
+            <p class="lab-card__meta">Editorial · Typography</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="lab-group" data-tags="packaging" data-reveal aria-labelledby="g1">
+        <div class="lab-group__label">
+          <p class="lab-group__num">02</p>
+          <h2 class="lab-group__title" id="g1">Packaging</h2>
+          <p class="lab-group__count">2 projects</p>
+        </div>
+        <div class="lab-group__items">
+          <a class="lab-card" href="quarzus/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-quarzus.webp" width="468" height="600" alt="Quarzus" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Quarzus</h3><span class="lab-card__year">2023</span></div>
+            <p class="lab-card__meta">Packaging · Typography</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="letti/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-letti.webp" width="468" height="600" alt="Letti" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Letti</h3><span class="lab-card__year">2023</span></div>
+            <p class="lab-card__meta">Packaging · Real client</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="lab-group" data-tags="interactive" data-reveal aria-labelledby="g2">
+        <div class="lab-group__label">
+          <p class="lab-group__num">03</p>
+          <h2 class="lab-group__title" id="g2">Interactive &amp; generative</h2>
+          <p class="lab-group__count">3 projects</p>
+        </div>
+        <div class="lab-group__items">
+          <a class="lab-card" href="ophelia/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-ophelia.webp" width="507" height="600" alt="OPHELIA" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">OPHELIA</h3><span class="lab-card__year">2026</span></div>
+            <p class="lab-card__meta">Interactive typography</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="corazon/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-corazon.webp" width="468" height="600" alt="Corazón" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Corazón</h3><span class="lab-card__year">2026</span></div>
+            <p class="lab-card__meta">Generative · Sound</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="forces-instrument/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-forces-instrument.webp" width="1074" height="600" alt="Forces Instrument" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Forces Instrument</h3><span class="lab-card__year">2026</span></div>
+            <p class="lab-card__meta">Generative · Performance</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="lab-group" data-tags="3d" data-reveal aria-labelledby="g3">
+        <div class="lab-group__label">
+          <p class="lab-group__num">04</p>
+          <h2 class="lab-group__title" id="g3">3D</h2>
+          <p class="lab-group__count">3 projects</p>
+        </div>
+        <div class="lab-group__items">
+          <a class="lab-card" href="humanized-objects/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-humanized-objects.webp" width="468" height="600" alt="Humanized objects" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Humanized objects</h3><span class="lab-card__year">2025</span></div>
+            <p class="lab-card__meta">3D scene · Art direction</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="machine-rig/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-machine-rig.webp" width="469" height="600" alt="Machine rig" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Machine rig</h3><span class="lab-card__year">2025</span></div>
+            <p class="lab-card__meta">Rigging</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="lab-card" href="robot-rig/">
+            <div class="lab-card__media"><img src="../assets/img/home/lab-robot-rig.webp" width="1074" height="600" alt="Robot rig" loading="lazy" decoding="async" /></div>
+            <div class="lab-card__head"><h3 class="lab-card__title">Robot rig</h3><span class="lab-card__year">2025</span></div>
+            <p class="lab-card__meta">3D · Rigging</p>
+            <span class="lab-card__link">View<span class="lg-only"> project</span> <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+      </div>
+    </main>
+
+    <footer class="container site-footer">
+      <a class="site-footer__email" href="mailto:marianaflorez1224@gmail.com">marianaflorez1224@gmail.com</a>
+      <p class="site-footer__legal">© 2026 Mariana Florez<span class="sm-only"> · Made in Medellín</span></p>
+    </footer>
+  </body>
+</html>
