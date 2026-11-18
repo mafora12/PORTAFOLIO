@@ -17,6 +17,15 @@
     "app-portafolio": "assets/img/cases/app-portafolio/components.webp",
   };
 
+  // Idioma: inglés por defecto; el español se guarda en localStorage y se aplica antes de
+  // partir el texto en palabras/letras para las animaciones
+  const lang = readLang();
+  const dict = lang === "es" && window.I18N_ES ? window.I18N_ES : null;
+  const t = (s) => (dict ? translateString(s, dict) : s);
+
+  if (dict) translatePage();
+  root.classList.remove("is-translating");
+  initLangSwitch();
   initMenu();
   initTextLines(); // antes de initReveal: convierte parte de los [data-reveal] en texto por líneas
   initReveal();
@@ -29,6 +38,85 @@
   initMagnetic();
   initCardHover();
   initLabScroll();
+
+  function readLang() {
+    try {
+      return localStorage.getItem("lang") === "es" ? "es" : "en";
+    } catch (e) {
+      return "en";
+    }
+  }
+
+  function translateString(s, table) {
+    if (table[s]) return table[s];
+    // "Proyecto — parte — parte": se traduce cada parte por separado
+    if (s.includes(" — ")) {
+      const parts = s.split(" — ");
+      const out = parts.map((p) => table[p] || p);
+      if (out.some((p, i) => p !== parts[i])) return out.join(" — ");
+    }
+    const mockup = s.match(/^(.+) mockup$/);
+    if (mockup) return `Mockup de ${table[mockup[1]] || mockup[1]}`;
+    return s;
+  }
+
+  function translatePage() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((node) => {
+      if (node.parentElement.closest("script, style")) return;
+      const raw = node.textContent;
+      const key = raw.replace(/\s+/g, " ").trim();
+      if (!key) return;
+      const text = t(key);
+      if (text === key) return;
+      node.textContent = (/^\s/.test(raw) ? " " : "") + text + (/\s$/.test(raw) ? " " : "");
+    });
+    document.querySelectorAll("[alt], [placeholder], [aria-label]").forEach((el) => {
+      ["alt", "placeholder", "aria-label"].forEach((attr) => {
+        const value = el.getAttribute(attr);
+        if (value) el.setAttribute(attr, t(value));
+      });
+    });
+    document.title = t(document.title);
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.content = t(meta.content);
+    root.lang = "es";
+  }
+
+  // Selector EN / ES en el nav y en el menú mobile; al cambiar, recarga la página en el otro idioma
+  function initLangSwitch() {
+    const make = (extraClass) => {
+      const group = document.createElement("div");
+      group.className = `lang ${extraClass}`;
+      group.setAttribute("role", "group");
+      group.setAttribute("aria-label", t("Language"));
+      ["en", "es"].forEach((code, i) => {
+        if (i) group.append(Object.assign(document.createElement("span"), { textContent: "/", ariaHidden: "true" }));
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.textContent = code.toUpperCase();
+        btn.setAttribute("lang", code);
+        btn.setAttribute("aria-pressed", String(code === lang));
+        btn.addEventListener("click", () => {
+          if (code === lang) return;
+          try {
+            localStorage.setItem("lang", code);
+          } catch (e) {
+            return;
+          }
+          location.reload();
+        });
+        group.append(btn);
+      });
+      return group;
+    };
+    const navRight = document.querySelector(".nav__right");
+    if (navRight) navRight.prepend(make("lang--nav"));
+    const menuBottom = document.querySelector(".menu__bottom");
+    if (menuBottom) menuBottom.append(make("lang--menu"));
+  }
 
   function initMenu() {
     const menu = document.getElementById("menu");
@@ -308,10 +396,10 @@
     document.body.append(cursor);
     root.classList.add("has-cursor");
 
-    document.querySelectorAll(".case-card, .mini-card").forEach((el) => (el.dataset.cursor = "View case"));
-    document.querySelectorAll(".lab-card, .lab-banner").forEach((el) => (el.dataset.cursor = "View project"));
+    document.querySelectorAll(".case-card, .mini-card").forEach((el) => (el.dataset.cursor = t("View case")));
+    document.querySelectorAll(".lab-card, .lab-banner").forEach((el) => (el.dataset.cursor = t("View project")));
     document.querySelectorAll(".case-next").forEach((el) => {
-      el.dataset.cursor = el.pathname.includes("/lab/") ? "View project" : "View case";
+      el.dataset.cursor = t(el.pathname.includes("/lab/") ? "View project" : "View case");
     });
 
     let x = 0;

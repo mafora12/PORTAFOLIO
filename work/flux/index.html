@@ -9,6 +9,9 @@
     <meta name="theme-color" content="#fbf7f4" />
     <script>
       document.documentElement.classList.add("js");
+      try {
+        if (localStorage.getItem("lang") === "es") document.documentElement.classList.add("is-translating");
+      } catch (e) {}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +20,7 @@
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/components.css" />
     <link rel="stylesheet" href="../../assets/css/case.css" />
+    <script src="../../assets/js/i18n-es.js" defer></script>
     <script src="../../assets/js/main.js" defer></script>
   </head>
   <body>
@@ -31,7 +35,7 @@
         <a href="../../contact/">Contact</a>
       </nav>
       <div class="nav__right">
-        <!-- EN / ES oculto hasta tener la versión en español -->
+        <!-- main.js agrega aquí el selector EN / ES -->
         <a class="btn btn--dark" href="../../assets/cv/mariana-florez-cv.pdf" download>Download CV</a>
       </div>
       <button

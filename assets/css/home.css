@@ -98,6 +98,13 @@
   white-space: nowrap;
 }
 
+/* En español "diseñadora de producto" es más largo: se achica para no montarse sobre la foto */
+@media (min-width: 900px) {
+  html[lang="es"] .hero__role {
+    font-size: 4.1cqw;
+  }
+}
+
 .hero__portrait {
   position: absolute;
   z-index: 1;
