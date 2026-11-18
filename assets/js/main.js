@@ -24,7 +24,7 @@
   initExpand();
   initFilters();
   initMailtoForm();
-  initAnagrams();
+  initNameStretch();
   initCursor();
   initMagnetic();
   initCardHover();
@@ -259,70 +259,41 @@
     });
   }
 
-  // 2 · Al pasar el cursor por el nombre, las letras se reordenan en otras palabras y vuelven
-  function initAnagrams() {
+  // 2 · Al pasar el cursor por el nombre, cada letra se estira y se encoge en ola (como "Room to grow")
+  function initNameStretch() {
     if (reduceMotion || !finePointer) return;
     const hero = document.querySelector(".hero__name");
-    if (hero && window.matchMedia("(min-width: 900px)").matches) {
-      setupAnagram(hero, [hero.querySelector(".hero__first"), hero.querySelector(".hero__last")], ["zona real", "firma"]);
-    }
+    if (hero) setupStretch(hero, [hero.querySelector(".hero__first"), hero.querySelector(".hero__last")]);
     const logo = document.querySelector(".nav__logo");
-    if (logo) setupAnagram(logo, [logo], ["firma real zona"]);
+    if (logo) setupStretch(logo, [logo]);
   }
 
-  function setupAnagram(owner, lines, targets) {
-    const makeChar = (c) => {
-      const span = document.createElement("span");
-      span.className = c === " " ? "ch ch--space" : "ch";
-      span.textContent = c;
-      span.setAttribute("aria-hidden", "true");
-      return span;
-    };
+  function setupStretch(owner, lines) {
     owner.setAttribute("aria-label", lines.map((l) => l.textContent.trim()).join(" "));
+    let k = 0;
     const letters = [];
-    const original = lines.map((line) => {
-      const chars = [...line.textContent.trim()].map(makeChar);
-      chars.forEach((c) => c.textContent !== " " && letters.push(c));
+    lines.forEach((line) => {
+      const chars = [...line.textContent.trim()].map((c) => {
+        const span = document.createElement("span");
+        span.className = c === " " ? "ch ch--space" : "ch";
+        span.textContent = c;
+        span.setAttribute("aria-hidden", "true");
+        if (c !== " ") {
+          span.style.setProperty("--k", k++);
+          letters.push(span);
+        }
+        return span;
+      });
       line.replaceChildren(...chars);
-      return chars;
     });
-    // La versión anagrama reutiliza los mismos spans, así cada letra viaja a su nuevo lugar
-    const pool = [...letters];
-    const anagram = targets.map((word) =>
-      [...word].map((c) => (c === " " ? makeChar(" ") : pool.splice(pool.findIndex((s) => s.textContent.toLowerCase() === c), 1)[0]))
-    );
 
-    // FLIP: mide, reordena, invierte y anima hasta la posición nueva
-    const arrange = (toAnagram) => {
-      const first = new Map(letters.map((s) => [s, s.getBoundingClientRect()]));
-      letters.forEach((s) => {
-        s.style.transition = "none";
-        s.style.transform = "";
-      });
-      owner.classList.toggle("is-anagram", toAnagram);
-      (toAnagram ? anagram : original).forEach((chars, i) => lines[i].replaceChildren(...chars));
-      letters.forEach((s) => {
-        const a = first.get(s);
-        const b = s.getBoundingClientRect();
-        s.style.transform = `translate(${a.left - b.left}px, ${a.top - b.top}px)`;
-      });
-      void owner.offsetWidth;
-      letters.forEach((s, i) => {
-        s.style.transition = `transform 0.9s var(--ease-out) ${i * 18}ms`;
-        s.style.transform = "";
-      });
-    };
-
-    let busy = false;
+    const last = letters[letters.length - 1];
     owner.addEventListener("pointerenter", () => {
-      if (busy) return;
-      busy = true;
-      arrange(true);
-      setTimeout(() => {
-        arrange(false);
-        setTimeout(() => (busy = false), 1200);
-      }, 1800);
+      if (owner.classList.contains("is-stretching")) return;
+      owner.classList.add("is-stretching");
     });
+    // Se puede volver a disparar cuando termina la última letra
+    last.addEventListener("animationend", () => owner.classList.remove("is-stretching"));
   }
 
   // 3 · Punto rosa en lugar del cursor; sobre proyectos crece y dice "View case"

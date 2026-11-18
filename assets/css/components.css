@@ -76,18 +76,62 @@
   transform: none;
 }
 
-/* 2 · Anagramas: cada letra es un bloque que viaja a su nueva posición */
+/* 2 · Nombre que se estira (inspirado en el video "Room to grow"): cada letra es una columna
+   que crece y se encoge en vertical, en ola; la segunda línea va a contratiempo de la primera */
 .ch {
   display: inline-block;
   white-space: pre;
+  transform-origin: 50% 100%;
 }
 
 .ch--space {
   width: 0.26em;
 }
 
-.is-anagram {
-  text-transform: lowercase;
+.is-stretching .ch {
+  animation: name-stretch 1.4s cubic-bezier(0.45, 0, 0.2, 1) both;
+  animation-delay: calc(var(--k, 0) * 65ms);
+}
+
+/* "Mariana" crece hacia abajo y "Florez" hacia arriba, como ROOM y GROW */
+.hero__first .ch {
+  transform-origin: 50% 0;
+}
+
+.is-stretching .hero__last .ch {
+  animation-name: name-squash;
+}
+
+@keyframes name-stretch {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(1.42);
+  }
+  50% {
+    transform: scaleY(0.78);
+  }
+  75% {
+    transform: scaleY(1.1);
+  }
+}
+
+@keyframes name-squash {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(0.72);
+  }
+  50% {
+    transform: scaleY(1.32);
+  }
+  75% {
+    transform: scaleY(0.94);
+  }
 }
 
 /* 3 · Cursor propio (solo con mouse) */

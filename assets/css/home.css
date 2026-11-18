@@ -107,6 +107,18 @@
   height: 74.627%;
   border-radius: 28px;
   box-shadow: var(--shadow-portrait);
+  overflow: hidden;
+  background: var(--c-placeholder);
+}
+
+/* Retrato: la cara queda centrada aunque el recorte cambie de proporción */
+.hero__portrait img,
+.momento__frame img,
+.about-hero__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 38%;
 }
 
 .hero__thumb {
@@ -345,8 +357,23 @@
 }
 
 .momento__frame {
+  position: relative;
   aspect-ratio: 1360 / 720;
   border-radius: 32px;
+  overflow: hidden;
+  background: var(--c-placeholder);
+}
+
+/* Velo oscuro para que la frase blanca se lea sobre la foto (solo desktop, donde va encima) */
+.momento__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 19, 0.38);
+}
+
+.momento__text {
+  z-index: 1;
 }
 
 .momento__text {
@@ -386,6 +413,10 @@
     clip-path: inset(
       calc((1 - var(--p, 1)) * var(--iy)) calc((1 - var(--p, 1)) * var(--ix)) round 24px
     );
+  }
+
+  .momento__frame::after {
+    display: none;
   }
 
   .momento__text {

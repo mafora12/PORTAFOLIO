@@ -209,6 +209,8 @@
   flex: 0 0 min(520px, 38%);
   aspect-ratio: 520 / 680;
   border-radius: 28px;
+  overflow: hidden;
+  background: var(--c-placeholder);
 }
 
 .statement {
